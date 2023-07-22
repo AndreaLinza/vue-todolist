@@ -37,21 +37,26 @@
 
 
             <div class="input-group input-group-lg mb-5">
-                <input type="text" class="form-control border border-secondary text-secondary" placeholder="Chi te muart"
-                v-model="newTodoItem.text"
-                @keyup.enter="clickTodoList">
-                <button class="btn btn-outline-secondary fs-4 fw-bold"
-                @click="clickTodoList">+</button>
+                <input type="text" class="form-control border border-secondary text-secondary"
+                    placeholder="Chi te muart" 
+                    v-model="newTodoItem.text" 
+                    @keyup.enter="clickTodoList">
+                <button class="btn btn-outline-secondary fs-4 fw-bold" @click="clickTodoList">+</button>
             </div>
 
             <div class="overflow-hidden shadow-lg">
                 <ul class="list-group list-group-flush rounded">
                     <li class="list-group-item d-flex justify-content-between fs-5" 
                     v-for="todoItem in todoList">
-                    
-                    <!-- :class="" -->
-                    <span class="fst-italic"> {{todoItem.id}} <span>)</span> {{todoItem.text}}</span>
-                    <button class="btn my-close-button" @click="cancelItem(todoItem.id)">X</button></li>
+
+                        <div :class="(todoItem.done === true ? 'text-decoration-line-through' : '' )"
+                        @click="lineThrough(todoItem)">    
+                            <span class="fst-italic pe-none"> 
+                                {{todoItem.id}} <span>)</span> {{todoItem.text}}
+                            </span>
+                        </div>
+                        <button class="btn my-close-button" @click="cancelItem(todoItem.id)">X</button>
+                    </li>
                 </ul>
             </div>
         </div>
