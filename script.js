@@ -1,35 +1,35 @@
 Vue.createApp({
     data() {
         return {
-            //lastIdItem: 0,   Se è vuota la lista
-            lastIdItem:4,
+            lastIdItem: 0,   //Se è vuota la lista
+            //lastIdItem:4,
             newTodoItem: {
                 id: this.lastIdItem,
                 text: "",
                 done: ""
             },
             todoList: [
-                {
-                    id: 1,
-                    text: "primo-task",
-                    done: true
-                },
-                {
-                    id: 2,
-                    text: "secondo-task",
-                    done: false
-                },
-                {
-                    id: 3,
-                    text: "terzo-task",
-                    done: true
-                },
-                {
-                    id: 4,
-                    text: "quarto-task",
-                    done: false
+                // {
+                //     id: 1,
+                //     text: "primo-task",
+                //     done: true
+                // },
+                // {
+                //     id: 2,
+                //     text: "secondo-task",
+                //     done: false
+                // },
+                // {
+                //     id: 3,
+                //     text: "terzo-task",
+                //     done: true
+                // },
+                // {
+                //     id: 4,
+                //     text: "quarto-task",
+                //     done: false
 
-                },
+                // },
 
             ],
 
