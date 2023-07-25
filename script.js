@@ -1,35 +1,35 @@
 Vue.createApp({
     data() {
         return {
-            lastIdItem: 0,   //Se è vuota la lista
-            //lastIdItem:4,
+            //lastIdItem: 0,   //Se è vuota la lista
+            lastIdItem:4,
             newTodoItem: {
-                id: this.lastIdItem,
+                id: 'this.lastIdItem',
                 text: "",
                 done: ""
             },
             todoList: [
-                // {
-                //     id: 1,
-                //     text: "primo-task",
-                //     done: true
-                // },
-                // {
-                //     id: 2,
-                //     text: "secondo-task",
-                //     done: false
-                // },
-                // {
-                //     id: 3,
-                //     text: "terzo-task",
-                //     done: true
-                // },
-                // {
-                //     id: 4,
-                //     text: "quarto-task",
-                //     done: false
+                {
+                    id: 1,
+                    text: "Fatti mandare dalla mamma a prendere il latte",
+                    done: true
+                },
+                {
+                    id: 2,
+                    text: "Io a Napoli non ci sono mai stato, figuriamoci in moto",
+                    done: false
+                },
+                {
+                    id: 3,
+                    text: "15 + 18 quanto fa?",
+                    done: true
+                },
+                {
+                    id: 4,
+                    text: "La capra è il migliore animale che c'è...",
+                    done: false
 
-                // },
+                },
 
             ],
 
@@ -46,7 +46,7 @@ Vue.createApp({
             
             
             this.todoList.push(itemClone)
-            console.log(this.todoList)
+            //console.log(this.todoList)
     },
     
     lineThrough(todo){
